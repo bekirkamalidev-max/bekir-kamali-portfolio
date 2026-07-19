@@ -1,35 +1,28 @@
-# Bekir Kamalı Portföy Sitesi
+# Bekir Kamalı Portföy Sitesi — V2
 
-Bu proje Vercel'e yüklemeye hazır statik bir web sitesidir.
+Bu klasör sitenin güncellenmiş sürümüdür.
 
-## Dosyalar
+## Güncelleme adımları
 
-- index.html
-- style.css
-- script.js
-- assets/
+1. GitHub'daki `bekir-kamali-portfolio` projesini aç.
+2. `Add file` → `Upload files` seç.
+3. Bu klasörün içindeki tüm dosya ve klasörleri yükleme alanına sürükle.
+4. GitHub aynı isimli dosyaları güncelleyecektir.
+5. Alttaki `Commit changes` butonuna bas.
+6. Vercel birkaç saniye içinde yeni sürümü otomatik yayınlar.
 
-## Bilgisayarda önizleme
+## V2 yenilikleri
 
-`index.html` dosyasına çift tıklayın.
+- Açılış animasyonu
+- Dönen referans vitrini
+- Daha güçlü hizmet kartları
+- Referans özellik etiketleri
+- Gelişmiş hover ve scroll animasyonları
+- Daha profesyonel hakkımda ve iletişim alanı
+- Mobil görünüm iyileştirmeleri
+- robots.txt ve sitemap.xml
 
-## Vercel ile yayınlama
-
-### Yöntem 1 — Vercel CLI kullanmadan GitHub üzerinden
-
-1. ZIP dosyasını bilgisayarınızda çıkarın.
-2. GitHub hesabınıza giriş yapın.
-3. Yeni bir repository oluşturun.
-4. Bu klasördeki dosyaların tamamını repository'ye yükleyin.
-5. Vercel hesabınıza giriş yapın.
-6. “Add New…” > “Project” seçeneğine basın.
-7. GitHub repository'sini içe aktarın.
-8. Framework Preset alanını “Other” bırakın.
-9. Build Command ve Output Directory alanlarını boş bırakın.
-10. “Deploy” butonuna basın.
-11. Yayın tamamlandığında size `proje-adiniz.vercel.app` şeklinde ücretsiz adres verilir.
-
-## İletişim bilgileri
+## İletişim
 
 - WhatsApp: +90 553 233 68 13
 - Instagram: @bekirkamali.dev

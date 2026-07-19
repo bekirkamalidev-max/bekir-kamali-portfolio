@@ -3,24 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bekir Kamalı — mobil uygulama ve web yazılım geliştirme hizmetleri.">
-  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Bekir Kamalı — mobil uygulama, web yazılımı, yönetim paneli ve yayınlama desteği.">
+  <meta name="theme-color" content="#070707">
+  <meta property="og:title" content="Bekir Kamalı | Software Developer">
+  <meta property="og:description" content="Fikirlerinizi modern mobil uygulamalara ve web projelerine dönüştürüyorum.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.jpeg">
   <title>Bekir Kamalı | Software Developer</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-mark">
+      <img src="assets/logo.jpeg" alt="">
+    </div>
+    <span>Bekir Kamalı</span>
+  </div>
+
   <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="#anasayfa" aria-label="Bekir Kamalı ana sayfa">
       <img src="assets/logo.jpeg" alt="Bekir Kamalı logosu">
-      <span>Bekir Kamalı</span>
+      <span>
+        <strong>Bekir Kamalı</strong>
+        <small>Software Developer</small>
+      </span>
     </a>
 
-    <button class="menu-button" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <button class="menu-button" aria-label="Menüyü aç" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
     <nav class="nav">
       <a href="#anasayfa">Ana Sayfa</a>
@@ -37,115 +55,274 @@
 
   <main>
     <section id="anasayfa" class="hero section">
-      <div class="hero-copy reveal">
-        <span class="eyebrow">Mobil uygulama & web geliştirme</span>
-        <p class="intro">Merhaba, ben <strong>Bekir Kamalı</strong></p>
-        <h1>Fikirlerinizi <span>Dijitale</span> Taşıyorum.</h1>
-        <p class="hero-text">
-          Modern, hızlı ve kullanıcı odaklı mobil uygulamalar ile web projeleri geliştiriyorum.
-          Fikrinizi yayına hazır, güçlü bir dijital ürüne dönüştürüyorum.
+      <div class="hero-copy">
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow"><i></i> Mobil uygulama & web geliştirme</span>
+          <p class="intro">Merhaba, ben <strong>Bekir Kamalı</strong></p>
+        </div>
+
+        <h1 class="reveal reveal-delay-2">
+          Fikirlerinizi<br>
+          <span>Dijitale</span><br>
+          Taşıyorum.
+        </h1>
+
+        <p class="hero-text reveal reveal-delay-3">
+          Mobil uygulama, web yazılımı ve yönetim paneli projelerini; tasarımdan yayına kadar
+          bütün süreci düşünerek geliştiriyorum.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-actions reveal reveal-delay-4">
           <a class="button"
              href="https://wa.me/905532336813?text=Merhaba%20Bekir%20Bey%2C%20bir%20proje%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
-             target="_blank" rel="noopener noreferrer">WhatsApp'tan Yaz</a>
-          <a class="button button-outline" href="https://instagram.com/bekirkamali.dev"
-             target="_blank" rel="noopener noreferrer">Instagram</a>
+             target="_blank" rel="noopener noreferrer">WhatsApp'tan Yaz <span>↗</span></a>
+
+          <a class="button button-outline"
+             href="https://instagram.com/bekirkamali.dev"
+             target="_blank" rel="noopener noreferrer">Instagram <span>↗</span></a>
         </div>
 
-        <div class="stats">
-          <div><strong>4</strong><span>Yayındaki referans</span></div>
-          <div><strong>Mobil</strong><span>Öncelikli tasarım</span></div>
-          <div><strong>7/24</strong><span>İletişim desteği</span></div>
+        <div class="stats reveal reveal-delay-5">
+          <div>
+            <strong data-counter="4">0</strong>
+            <span>Yayındaki referans</span>
+          </div>
+          <div>
+            <strong>%100</strong>
+            <span>Mobil uyumlu</span>
+          </div>
+          <div>
+            <strong>7/24</strong>
+            <span>İletişim desteği</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-visual reveal">
-        <div class="logo-orbit">
-          <div class="orbit"></div>
-          <img src="assets/logo.jpeg" alt="BK Software Developer">
+      <div class="hero-showcase reveal reveal-delay-3">
+        <div class="showcase-ring ring-one"></div>
+        <div class="showcase-ring ring-two"></div>
+
+        <div class="showcase-window">
+          <div class="showcase-topbar">
+            <span class="status-dot"></span>
+            <span id="showcaseCategory">Mobil Uygulama</span>
+            <span class="live-badge">Referans Proje</span>
+          </div>
+
+          <a id="showcaseLink" href="https://winkaiapp.com/" target="_blank" rel="noopener noreferrer">
+            <img id="showcaseImage" src="assets/references/wink-ai.jpeg" alt="Wink AI referans projesi">
+            <div class="showcase-overlay">
+              <span id="showcaseName">Wink AI</span>
+              <b>Projeyi İncele ↗</b>
+            </div>
+          </a>
+
+          <div class="showcase-controls">
+            <button class="showcase-dot active" data-index="0" aria-label="Wink AI"></button>
+            <button class="showcase-dot" data-index="1" aria-label="UBEON"></button>
+            <button class="showcase-dot" data-index="2" aria-label="Anlaşmalı Evlilik"></button>
+            <button class="showcase-dot" data-index="3" aria-label="Ev Arkadaşı"></button>
+          </div>
         </div>
-        <div class="floating-card card-one">Web Yazılım</div>
-        <div class="floating-card card-two">Mobil Uygulama</div>
+
+        <div class="floating-label label-one">Mobil Uygulama</div>
+        <div class="floating-label label-two">Web Yazılımı</div>
       </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Hizmet özeti">
+      <div>Mobil Uygulama</div>
+      <span>•</span>
+      <div>Web Yazılımı</div>
+      <span>•</span>
+      <div>Yönetim Paneli</div>
+      <span>•</span>
+      <div>Yayınlama Desteği</div>
+      <span>•</span>
+      <div>Bakım & Geliştirme</div>
     </section>
 
     <section id="hizmetler" class="section">
       <div class="section-heading reveal">
-        <span class="eyebrow">Hizmetlerim</span>
-        <h2>Neler <span>Yapıyorum?</span></h2>
-        <p>Fikir aşamasından yayın sürecine kadar ihtiyacınıza uygun çözümler geliştiriyorum.</p>
+        <span class="eyebrow"><i></i> Hizmetlerim</span>
+        <h2>Bir fikri, çalışan bir <span>ürüne</span> dönüştürüyorum.</h2>
+        <p>Projenin ihtiyaçlarına göre sade, hızlı ve güven veren çözümler geliştiriyorum.</p>
       </div>
 
       <div class="services-grid">
-        <article class="service-card reveal"><span>01</span><h3>Mobil Uygulama</h3><p>iOS ve Android için modern, hızlı ve kullanıcı dostu uygulamalar.</p></article>
-        <article class="service-card reveal"><span>02</span><h3>Web Yazılım</h3><p>Markanıza özel, mobil uyumlu ve yüksek performanslı web projeleri.</p></article>
-        <article class="service-card reveal"><span>03</span><h3>Yönetim Paneli</h3><p>Verilerinizi kolayca yönetebileceğiniz sade ve güçlü paneller.</p></article>
-        <article class="service-card reveal"><span>04</span><h3>UI/UX Tasarım</h3><p>Kullanıcı odaklı, güven veren ve dikkat çekici arayüz tasarımları.</p></article>
-        <article class="service-card reveal"><span>05</span><h3>Bakım & Destek</h3><p>Yayın sonrası güncelleme, teknik destek ve geliştirme hizmetleri.</p></article>
+        <article class="service-card reveal">
+          <div class="service-number">01</div>
+          <div class="service-icon">◫</div>
+          <h3>Mobil Uygulama</h3>
+          <p>iOS ve Android için modern, performanslı ve kullanıcı dostu uygulamalar.</p>
+          <ul>
+            <li>Kullanıcı hesapları</li>
+            <li>Bildirim ve mesajlaşma</li>
+            <li>Abonelik ve ödeme</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">02</div>
+          <div class="service-icon">◎</div>
+          <h3>Web Yazılımı</h3>
+          <p>Markanıza özel, mobil uyumlu ve güçlü bir dijital vitrin.</p>
+          <ul>
+            <li>Kurumsal web sitesi</li>
+            <li>Üyelik ve ilan sistemi</li>
+            <li>Özel web platformu</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">03</div>
+          <div class="service-icon">▦</div>
+          <h3>Yönetim Paneli</h3>
+          <p>Verilerinizi ve kullanıcılarınızı kolayca yönetebileceğiniz paneller.</p>
+          <ul>
+            <li>Kullanıcı yönetimi</li>
+            <li>İçerik ve veri kontrolü</li>
+            <li>Yetkilendirme sistemi</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">04</div>
+          <div class="service-icon">↗</div>
+          <h3>Yayınlama & Destek</h3>
+          <p>Projeyi testten mağaza ve sunucu yayın süreçlerine kadar takip ediyorum.</p>
+          <ul>
+            <li>App Store / Google Play</li>
+            <li>Sunucu ve domain kurulumu</li>
+            <li>Bakım ve geliştirme</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section id="referanslar" class="section">
+    <section id="referanslar" class="section projects-section">
       <div class="section-heading reveal">
-        <span class="eyebrow">Referanslar</span>
-        <h2>Bazı <span>Çalışmalarım</span></h2>
-        <p>Görsele veya “Projeyi İncele” butonuna tıklayarak canlı projeyi açabilirsiniz.</p>
+        <span class="eyebrow"><i></i> Referanslar</span>
+        <h2>Yayındaki bazı <span>çalışmalarım.</span></h2>
+        <p>Her kart gerçek ve erişilebilir bir projeye yönlendirir.</p>
       </div>
 
       <div class="projects-grid">
         <a class="project-card reveal" href="https://winkaiapp.com/" target="_blank" rel="noopener noreferrer">
-          <div class="project-image"><img src="assets/references/wink-ai.jpeg" alt="Wink AI projesi" loading="lazy"></div>
-          <div class="project-info"><div><span>Mobil Uygulama</span><h3>Wink AI</h3></div><b>Projeyi İncele ↗</b></div>
+          <div class="project-visual">
+            <img src="assets/references/wink-ai.jpeg" alt="Wink AI projesi" loading="lazy">
+            <div class="project-action">Canlı projeyi aç ↗</div>
+          </div>
+          <div class="project-info">
+            <div>
+              <span>Mobil Uygulama</span>
+              <h3>Wink AI</h3>
+            </div>
+            <div class="project-tags">
+              <span>Görsel analiz</span>
+              <span>Kişiselleştirilmiş öneri</span>
+              <span>Abonelik sistemi</span>
+            </div>
+          </div>
         </a>
 
         <a class="project-card reveal" href="https://ubeonlogistics.com/" target="_blank" rel="noopener noreferrer">
-          <div class="project-image"><img src="assets/references/ubeon.jpeg" alt="UBEON Logistics projesi" loading="lazy"></div>
-          <div class="project-info"><div><span>Mobil & Web</span><h3>UBEON Logistics</h3></div><b>Projeyi İncele ↗</b></div>
+          <div class="project-visual">
+            <img src="assets/references/ubeon.jpeg" alt="UBEON Logistics projesi" loading="lazy">
+            <div class="project-action">Canlı projeyi aç ↗</div>
+          </div>
+          <div class="project-info">
+            <div>
+              <span>Mobil & Web</span>
+              <h3>UBEON Logistics</h3>
+            </div>
+            <div class="project-tags">
+              <span>Canlı mesajlaşma</span>
+              <span>Harita ve konum</span>
+              <span>Bildirim sistemi</span>
+            </div>
+          </div>
         </a>
 
         <a class="project-card reveal" href="https://anlasmalievlilik.net" target="_blank" rel="noopener noreferrer">
-          <div class="project-image"><img src="assets/references/anlasmali-evlilik.jpeg" alt="Anlaşmalı Evlilik projesi" loading="lazy"></div>
-          <div class="project-info"><div><span>Web Platformu</span><h3>Anlaşmalı Evlilik</h3></div><b>Projeyi İncele ↗</b></div>
+          <div class="project-visual">
+            <img src="assets/references/anlasmali-evlilik.jpeg" alt="Anlaşmalı Evlilik projesi" loading="lazy">
+            <div class="project-action">Canlı projeyi aç ↗</div>
+          </div>
+          <div class="project-info">
+            <div>
+              <span>Web Platformu</span>
+              <h3>Anlaşmalı Evlilik</h3>
+            </div>
+            <div class="project-tags">
+              <span>Üyelik sistemi</span>
+              <span>İlan yönetimi</span>
+              <span>Mesajlaşma</span>
+            </div>
+          </div>
         </a>
 
         <a class="project-card reveal" href="https://evecikiyorum.com" target="_blank" rel="noopener noreferrer">
-          <div class="project-image"><img src="assets/references/evecikiyorum.jpeg" alt="Ev Arkadaşı projesi" loading="lazy"></div>
-          <div class="project-info"><div><span>Web Platformu</span><h3>Ev Arkadaşı</h3></div><b>Projeyi İncele ↗</b></div>
+          <div class="project-visual">
+            <img src="assets/references/evecikiyorum.jpeg" alt="Ev Arkadaşı projesi" loading="lazy">
+            <div class="project-action">Canlı projeyi aç ↗</div>
+          </div>
+          <div class="project-info">
+            <div>
+              <span>Web Platformu</span>
+              <h3>Ev Arkadaşı</h3>
+            </div>
+            <div class="project-tags">
+              <span>İlan duvarı</span>
+              <span>Mobil uyumlu</span>
+              <span>Kolay kullanım</span>
+            </div>
+          </div>
         </a>
       </div>
     </section>
 
     <section id="hakkimda" class="section about">
       <div class="about-panel reveal">
-        <div>
-          <span class="eyebrow">Hakkımda</span>
-          <h2>Fikri yalnızca kodlamıyor, <span>yayına taşıyorum.</span></h2>
+        <div class="about-title">
+          <span class="eyebrow"><i></i> Hakkımda</span>
+          <h2>Yalnızca kod değil, <span>sonuç</span> üretiyorum.</h2>
+          <div class="signature">Bekir Kamalı</div>
         </div>
-        <div>
+
+        <div class="about-content">
           <p>
-            Ben Bekir Kamalı. Mobil uygulama ve web projeleri geliştiriyorum.
-            Amacım yalnızca çalışan bir ürün teslim etmek değil; müşterinin güvenle kullanabileceği,
-            modern görünen ve gerçek ihtiyaca çözüm üreten bir dijital ürün ortaya çıkarmak.
+            Mobil uygulama ve web projelerinde; tasarım, kullanıcı akışı, geliştirme,
+            test ve yayın süreçlerini tek bir bütün olarak ele alıyorum.
           </p>
           <p>
-            Tasarım, geliştirme, test ve yayın süreçlerini bütün olarak ele alıyor;
-            proje sonrasında da bakım ve geliştirme desteği sağlıyorum.
+            Hedefim yalnızca çalışan bir ürün hazırlamak değil; müşterinin güvenle sunabileceği,
+            modern görünen ve gerçek bir ihtiyaca cevap veren bir dijital ürün ortaya çıkarmak.
           </p>
+
+          <div class="about-points">
+            <div><b>01</b><span>İhtiyacı doğru analiz etme</span></div>
+            <div><b>02</b><span>Sade ve güçlü kullanıcı deneyimi</span></div>
+            <div><b>03</b><span>Yayın sonrası destek</span></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="iletisim" class="section contact">
       <div class="contact-card reveal">
-        <span class="eyebrow">Bir fikriniz mi var?</span>
-        <h2>Birlikte <span>hayata geçirelim.</span></h2>
-        <p>Projenizi kısaca anlatın. İhtiyacınızı değerlendirip en doğru çözüm için dönüş sağlayayım.</p>
+        <div class="contact-light"></div>
+        <span class="eyebrow"><i></i> Yeni bir proje</span>
+        <h2>Fikrinizi birlikte <span>hayata geçirelim.</span></h2>
+        <p>Projenizi kısaca anlatın. İhtiyacınızı değerlendirip en doğru yol haritasıyla dönüş sağlayayım.</p>
+
         <div class="contact-actions">
-          <a class="button" href="https://wa.me/905532336813?text=Merhaba%20Bekir%20Bey%2C%20bir%20proje%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a class="button button-outline" href="mailto:bekirkamali.dev@gmail.com">E-posta Gönder</a>
+          <a class="button"
+             href="https://wa.me/905532336813?text=Merhaba%20Bekir%20Bey%2C%20bir%20proje%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
+             target="_blank" rel="noopener noreferrer">WhatsApp'tan Yaz <span>↗</span></a>
+          <a class="button button-outline" href="mailto:bekirkamali.dev@gmail.com">E-posta Gönder <span>↗</span></a>
         </div>
+
         <div class="contact-links">
           <a href="mailto:bekirkamali.dev@gmail.com">bekirkamali.dev@gmail.com</a>
           <a href="https://instagram.com/bekirkamali.dev" target="_blank" rel="noopener noreferrer">@bekirkamali.dev</a>
@@ -157,9 +334,16 @@
 
   <a class="floating-whatsapp"
      href="https://wa.me/905532336813?text=Merhaba%20Bekir%20Bey%2C%20bir%20proje%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum."
-     target="_blank" rel="noopener noreferrer" aria-label="WhatsApp'tan yaz">WA</a>
+     target="_blank" rel="noopener noreferrer" aria-label="WhatsApp'tan yaz">
+    <span>WA</span>
+  </a>
 
   <footer>
+    <div class="footer-brand">
+      <img src="assets/logo.jpeg" alt="">
+      <div><strong>Bekir Kamalı</strong><span>Software Developer</span></div>
+    </div>
+
     <p>© <span id="year"></span> Bekir Kamalı. Tüm hakları saklıdır.</p>
     <a href="#anasayfa">Yukarı dön ↑</a>
   </footer>
